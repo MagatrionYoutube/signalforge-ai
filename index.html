@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SignalForge AI — B2B Website Teardown & Hyper-Personalized Cold Outreach SaaS</title>
+  <meta name="description" content="Scan any B2B prospect domain in 5 seconds, uncover hidden conversion leaks, generate a shareable client audit report, and launch a 3-step personalized cold email sequence." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Top Promotional Banner -->
+  <div class="top-banner" id="topBanner">
+    <span class="badge">New v1.0 Launch</span>
+    Turn any B2B domain into a personalized conversion audit + 3-step cold email sequence in 5 seconds.
+    <a href="#pricing" onclick="switchMode('landing')" style="text-decoration:underline; margin-left:8px; font-weight:700; color:#6ee7b7;">Lock in Founder Pricing &rarr;</a>
+  </div>
+
+  <!-- Main Sticky Navigation -->
+  <header class="navbar">
+    <div class="brand" onclick="switchMode('landing')">
+      <div class="brand-icon">SF</div>
+      <span>SignalForge <span style="font-weight:400; font-size:0.82rem; color:var(--text-muted);">AI</span></span>
+    </div>
+
+    <nav class="nav-links" id="marketingNav">
+      <a href="#features" onclick="switchMode('landing')">Features</a>
+      <a href="#roi-calculator" onclick="switchMode('landing')">ROI Calculator</a>
+      <a href="#pricing" onclick="switchMode('landing')">Pricing</a>
+      <a href="javascript:void(0)" onclick="openBusinessKitModal()">Founder Kit</a>
+    </nav>
+
+    <div class="nav-actions">
+      <span id="activePlanBadge" class="score-pill score-high" style="cursor:pointer;" onclick="openAppTab('settings')">Growth Pro ($149/mo)</span>
+      <button class="btn btn-secondary btn-sm" id="toggleViewBtn" onclick="toggleMode()">Open SaaS Dashboard &rarr;</button>
+      <button class="btn btn-primary btn-sm" onclick="openAppTab('scanner')">+ Scan Prospect</button>
+    </div>
+  </header>
+
+  <!-- ===================================================================== -->
+  <!-- VIEW 1: HIGH-CONVERTING MARKETING LANDING PAGE                        -->
+  <!-- ===================================================================== -->
+  <main id="landingView">
+    <section class="hero container">
+      <div class="hero-pill">
+        <span>⚡ B2B Outbound & Conversion Intelligence Engine</span>
+      </div>
+      <h1>
+        Stop Sending Generic Cold Emails.<br />
+        <span class="gradient-text">Send Live Website Teardowns That Close Deals.</span>
+      </h1>
+      <p class="subtitle">
+        SignalForge scans any prospect's website in seconds, detects high-value SEO & conversion leaks, generates a branded PDF audit report, and writes a 3-step cold sequence tailored to their exact bottlenecks.
+      </p>
+
+      <!-- Live Interactive Scanner inside Hero -->
+      <div class="hero-scanner-card">
+        <div style="text-align:left; font-size:0.84rem; font-weight:700; color:#a5b4fc; margin-bottom:10px; display:flex; justify-content:space-between;">
+          <span>TRY IT LIVE — ENTER ANY B2B PROSPECT DOMAIN</span>
+          <span style="color:var(--accent);">✓ Instant Audit + 3-Step Cold Email Sequence</span>
+        </div>
+        <div class="scanner-input-row">
+          <input type="text" id="heroDomainInput" placeholder="e.g. apexlogistics.com, revops-agency.io, or your prospect's URL" value="summit-manufacturing.com" />
+          <input type="text" id="heroContactInput" placeholder="Decision Maker Name (e.g. Ryan Brooks)" value="Ryan Brooks" style="max-width:230px;" />
+          <button class="btn btn-accent btn-lg" onclick="runHeroAudit()">Run Free Teardown &rarr;</button>
+        </div>
+        <div class="hero-trust-metrics">
+          <span><strong>3.8x Higher</strong> Cold Reply Rate</span>
+          <span><strong>6-Point</strong> Conversion & Tech Audit</span>
+          <span><strong>1-Click</strong> Shareable Client PDF Report</span>
+          <span><strong>Stripe-Ready</strong> Multi-Tier B2B SaaS</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Product Features Section -->
+    <section class="section" id="features">
+      <div class="container">
+        <div class="section-header">
+          <h2>Everything You Need to Book 20+ Sales Calls a Month</h2>
+          <p>Replace 4 expensive tools with one unified outbound intelligence & conversion audit platform.</p>
+        </div>
+        <div class="grid-3">
+          <div class="feature-card">
+            <div class="feature-icon">🔍</div>
+            <h3>6-Point Conversion Leak Scanner</h3>
+            <p>Automatically inspects prospect domains for missing H1s, slow mobile LCP, high-friction demo forms, missing chat widgets, and absent social proof above the fold.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">✉️</div>
+            <h3>Hyper-Personalized 3-Step Sequences</h3>
+            <p>Dynamically injects the exact vulnerabilities found on your prospect's website into a Day 1 Teardown Email, Day 3 Value Bump, Day 7 Breakup, and LinkedIn DM.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">📄</div>
+            <h3>White-Label Client Audit Reports</h3>
+            <p>Generate a clean, printable 1-page Conversion Health Report Card with your agency's branding and calendar link — the ultimate foot-in-the-door lead magnet.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">📊</div>
+            <h3>Built-In Outbound CRM & Pipeline</h3>
+            <p>Track every audited prospect from initial scan to Outreach Sent, Replied, Booked Call, and Closed Won with deal values and bulk CSV export.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">⚡</div>
+            <h3>Bulk Domain Batch Auditing</h3>
+            <p>Paste a list of 10 or 50 target domains at once. SignalForge audits every company and builds custom outreach campaigns for your entire list in seconds.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">💳</div>
+            <h3>Turnkey SaaS + Agency Monetization</h3>
+            <p>Monetize two ways immediately: sell SignalForge SaaS subscriptions ($49–$399/mo via Stripe) OR use it internally to close $2,500+/mo B2B growth retainers.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive ROI & Revenue Calculator -->
+    <section class="section" id="roi-calculator">
+      <div class="container">
+        <div class="section-header">
+          <h2>Calculate Your Monthly Outbound Pipeline</h2>
+          <p>See how much monthly recurring revenue (MRR) personalized audit outreach unlocks.</p>
+        </div>
+
+        <div class="roi-box">
+          <div>
+            <div class="slider-group">
+              <div class="slider-label">
+                <span>Prospects Audited & Contacted Per Day</span>
+                <span class="val" id="roiLeadsVal">25 prospects/day</span>
+              </div>
+              <input type="range" id="roiLeadsSlider" min="5" max="100" step="5" value="25" oninput="updateRoiCalculator()" />
+            </div>
+
+            <div class="slider-group">
+              <div class="slider-label">
+                <span>Positive Reply / Audit Request Rate</span>
+                <span class="val" id="roiReplyVal">8%</span>
+              </div>
+              <input type="range" id="roiReplySlider" min="2" max="20" step="1" value="8" oninput="updateRoiCalculator()" />
+            </div>
+
+            <div class="slider-group">
+              <div class="slider-label">
+                <span>Booked Call-to-Close Conversion Rate</span>
+                <span class="val" id="roiCloseVal">20%</span>
+              </div>
+              <input type="range" id="roiCloseSlider" min="5" max="40" step="5" value="20" oninput="updateRoiCalculator()" />
+            </div>
+
+            <div class="slider-group" style="margin-bottom:0;">
+              <div class="slider-label">
+                <span>Your Average Client Retainer / Deal Value</span>
+                <span class="val" id="roiDealVal">$2,500</span>
+              </div>
+              <input type="range" id="roiDealSlider" min="500" max="10000" step="500" value="2500" oninput="updateRoiCalculator()" />
+            </div>
+          </div>
+
+          <div class="roi-results">
+            <div style="font-size:0.85rem; text-transform:uppercase; letter-spacing:0.06em; color:var(--text-muted); font-weight:700;">
+              Projected New Monthly Revenue
+            </div>
+            <div class="roi-big-number" id="roiMonthlyRevenue">$22,500/mo</div>
+            <div style="font-size:0.9rem; color:#cbd5e1;">
+              Based on <strong id="roiBookedCount" style="color:#fff;">44</strong> audit replies and <strong id="roiDealsCount" style="color:var(--accent);">9</strong> closed deals/month
+            </div>
+
+            <div class="roi-sub-grid">
+              <div>
+                <div style="font-size:0.78rem; color:var(--text-muted);">Annualized Pipeline</div>
+                <div style="font-size:1.25rem; font-weight:800; color:#fff;" id="roiAnnualRevenue">$270,000/yr</div>
+              </div>
+              <div>
+                <div style="font-size:0.78rem; color:var(--text-muted);">Return on $149/mo Plan</div>
+                <div style="font-size:1.25rem; font-weight:800; color:var(--accent);" id="roiMultiple">151x ROI</div>
+              </div>
+            </div>
+
+            <button class="btn btn-primary btn-lg" style="width:100%; margin-top:22px;" onclick="switchMode('app')">
+              Launch SignalForge Studio Now &rarr;
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3-Tier SaaS Pricing Section -->
+    <section class="section" id="pricing">
+      <div class="container">
+        <div class="section-header">
+          <h2>Simple, High-ROI Pricing</h2>
+          <p>Close just one client and pay for SignalForge for the next 2 years.</p>
+        </div>
+
+        <div class="grid-3">
+          <!-- Starter Tier -->
+          <div class="pricing-card">
+            <h3>Starter</h3>
+            <p style="color:var(--text-muted); font-size:0.9rem;">For solo founders, freelancers & consultants validating outbound.</p>
+            <div class="price-tag">$49<span>/month</span></div>
+            <ul class="pricing-features">
+              <li>100 Live Website Conversion Audits / mo</li>
+              <li>3-Step Cold Email & LinkedIn Generator</li>
+              <li>Built-in Outbound Lead CRM</li>
+              <li>Standard PDF Audit Reports</li>
+              <li>CSV Import & Export</li>
+            </ul>
+            <button class="btn btn-secondary" style="width:100%;" onclick="triggerCheckout('starter')">Select Starter ($49/mo)</button>
+          </div>
+
+          <!-- Growth Pro Tier -->
+          <div class="pricing-card popular">
+            <div class="popular-badge">Most Popular</div>
+            <h3>Growth Pro</h3>
+            <p style="color:var(--text-muted); font-size:0.9rem;">For B2B agencies & sales teams scaling predictable deal flow.</p>
+            <div class="price-tag">$149<span>/month</span></div>
+            <ul class="pricing-features">
+              <li>500 Live Website Conversion Audits / mo</li>
+              <li>Bulk Domain Batch Scanner (up to 50 at once)</li>
+              <li>White-Label Client Audit PDF Reports</li>
+              <li>Custom Offer & Calendar Link Injection</li>
+              <li>OpenAI & Gemini API Enrichment Support</li>
+              <li>Priority Deliverability Templates</li>
+            </ul>
+            <button class="btn btn-primary" style="width:100%;" onclick="triggerCheckout('growth')">Upgrade to Growth Pro ($149/mo)</button>
+          </div>
+
+          <!-- Agency Scale Tier -->
+          <div class="pricing-card">
+            <h3>Agency Scale</h3>
+            <p style="color:var(--text-muted); font-size:0.9rem;">For lead-gen agencies managing multiple client campaigns.</p>
+            <div class="price-tag">$399<span>/month</span></div>
+            <ul class="pricing-features">
+              <li>2,500 Live Website Conversion Audits / mo</li>
+              <li>Unlimited White-Label Client Workspaces</li>
+              <li>Custom Domain Shareable Audit Links</li>
+              <li>Full Webhook & CRM API Access</li>
+              <li>Dedicated Onboarding & Cold Email Setup</li>
+            </ul>
+            <button class="btn btn-secondary" style="width:100%;" onclick="triggerCheckout('agency')">Select Agency Scale ($399/mo)</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="section" style="padding:40px 0; text-align:center; color:var(--text-muted); font-size:0.88rem;">
+      <div class="container" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;">
+        <div>
+          <strong>SignalForge Inc.</strong> &copy; 2026. All rights reserved. Built for high-ticket B2B revenue teams.
+        </div>
+        <div style="display:flex; gap:20px;">
+          <a href="javascript:void(0)" onclick="openBusinessKitModal()">Founder Playbook & Scripts</a>
+          <a href="javascript:void(0)" onclick="openLegalModal('terms')">Terms of Service</a>
+          <a href="javascript:void(0)" onclick="openLegalModal('privacy')">Privacy Policy</a>
+          <a href="javascript:void(0)" onclick="switchMode('app')">App Login</a>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- ===================================================================== -->
+  <!-- VIEW 2: FULL WORKING SAAS APPLICATION (5-TAB DASHBOARD)               -->
+  <!-- ===================================================================== -->
+  <div id="appView" class="app-layout hidden">
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <div>
+        <div style="font-size:0.75rem; text-transform:uppercase; letter-spacing:0.06em; color:var(--text-dim); font-weight:700; padding:0 12px 10px;">
+          Workspace Menu
+        </div>
+        <div class="side-nav">
+          <button class="side-btn active" id="nav-overview" onclick="openAppTab('overview')">
+            <span>📊</span> Executive Overview
+          </button>
+          <button class="side-btn" id="nav-scanner" onclick="openAppTab('scanner')">
+            <span>🔍</span> Website Auditor
+          </button>
+          <button class="side-btn" id="nav-outreach" onclick="openAppTab('outreach')">
+            <span>✉️</span> Outreach Sequence Studio
+          </button>
+          <button class="side-btn" id="nav-crm" onclick="openAppTab('crm')">
+            <span>🗂️</span> Lead CRM & Bulk Scan
+          </button>
+          <button class="side-btn" id="nav-settings" onclick="openAppTab('settings')">
+            <span>⚙️</span> Billing & White-Label
+          </button>
+        </div>
+
+        <div style="margin-top:24px; padding-top:18px; border-top:1px solid var(--border);">
+          <div style="font-size:0.75rem; text-transform:uppercase; letter-spacing:0.06em; color:var(--text-dim); font-weight:700; padding:0 12px 10px;">
+            Founder Resources
+          </div>
+          <button class="side-btn" onclick="openBusinessKitModal()">
+            <span>🚀</span> $10k MRR Launch Kit
+          </button>
+          <button class="side-btn" onclick="switchMode('landing')">
+            <span>🌐</span> View Public Landing Page
+          </button>
+        </div>
+      </div>
+
+      <div class="usage-widget">
+        <div style="display:flex; justify-content:space-between; font-size:0.8rem; font-weight:600;">
+          <span>Audit Credits</span>
+          <span id="creditsText" style="color:var(--accent);">14 / 500</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" id="creditsBar"></div>
+        </div>
+        <div style="font-size:0.76rem; color:var(--text-muted); margin-bottom:10px;" id="sidebarPlanLabel">
+          Plan: Growth Pro ($149/mo)
+        </div>
+        <button class="btn btn-primary btn-sm" style="width:100%;" onclick="openAppTab('settings')">
+          Manage Plan & Billing
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <section class="app-main">
+
+      <!-- TAB 1: EXECUTIVE OVERVIEW -->
+      <div id="tab-overview" class="app-tab">
+        <div class="panel-header">
+          <div>
+            <h2 style="font-size:1.6rem; font-weight:800;">Executive Pipeline Overview</h2>
+            <p style="color:var(--text-muted); font-size:0.9rem;">Real-time metrics across your audited B2B accounts and active cold sequences.</p>
+          </div>
+          <div style="display:flex; gap:10px;">
+            <button class="btn btn-secondary btn-sm" onclick="exportCrmCsv()">⬇ Export Pipeline CSV</button>
+            <button class="btn btn-primary btn-sm" onclick="openAppTab('scanner')">+ Run New Website Audit</button>
+          </div>
+        </div>
+
+        <div class="kpi-grid">
+          <div class="kpi-card">
+            <div class="kpi-label">Active Pipeline Value</div>
+            <div class="kpi-value" id="kpiTotalPipeline">$15,200</div>
+            <div class="kpi-sub" id="kpiLeadCount">4 high-intent B2B accounts</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-label">Closed Won Revenue</div>
+            <div class="kpi-value" id="kpiWonRevenue" style="color:var(--accent);">$4,200</div>
+            <div class="kpi-sub">From audit-based cold outreach</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-label">Booked Calls & Replies</div>
+            <div class="kpi-value" id="kpiActiveConversations">2</div>
+            <div class="kpi-sub">38.4% positive engagement</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-label">Avg Prospect Site Score</div>
+            <div class="kpi-value" id="kpiAvgScore" style="color:var(--warning);">48 / 100</div>
+            <div class="kpi-sub">Lower score = higher urgency to buy</div>
+          </div>
+        </div>
+
+        <!-- Quick Scan Bar -->
+        <div class="panel" style="border-color:var(--border-highlight);">
+          <div style="font-weight:700; margin-bottom:10px; display:flex; justify-content:space-between; align-items:center;">
+            <span>⚡ Instant Prospect Domain Scanner</span>
+            <span style="font-size:0.8rem; color:var(--text-muted);">Audits SEO, speed, CTA friction & writes 3-step cold sequence</span>
+          </div>
+          <div class="scanner-input-row">
+            <input type="text" id="quickDomainInput" placeholder="Enter prospect domain (e.g. zenith-erp.com)" />
+            <input type="text" id="quickContactInput" placeholder="Contact Name (e.g. Sarah Jenkins)" style="max-width:220px;" />
+            <input type="number" id="quickValueInput" placeholder="Deal Value ($)" value="3000" style="max-width:160px;" />
+            <button class="btn btn-accent" onclick="runQuickScan()">Audit & Generate Outreach &rarr;</button>
+          </div>
+        </div>
+
+        <!-- Recent Audited Prospects Table -->
+        <div class="panel">
+          <div class="panel-header">
+            <h3>Recent Prospect Website Audits</h3>
+            <button class="btn btn-secondary btn-sm" onclick="openAppTab('crm')">View Full CRM &rarr;</button>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Company & Domain</th>
+                  <th>Decision Maker</th>
+                  <th>Audit Score</th>
+                  <th>Top Revenue Leak Detected</th>
+                  <th>Deal Value</th>
+                  <th>Pipeline Stage</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="overviewTableBody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 2: WEBSITE AUDITOR & TEARDOWN STUDIO -->
+      <div id="tab-scanner" class="app-tab hidden">
+        <div class="panel-header">
+          <div>
+            <h2 style="font-size:1.6rem; font-weight:800;">B2B Website Auditor & Teardown Studio</h2>
+            <p style="color:var(--text-muted); font-size:0.9rem;">Run a deep conversion diagnostic on any prospect domain and generate a client-ready PDF audit report.</p>
+          </div>
+          <div style="display:flex; gap:8px; flex-wrap:wrap;">
+            <button class="btn btn-secondary btn-sm" onclick="fillPresetProspect('saas')">Demo: B2B SaaS</button>
+            <button class="btn btn-secondary btn-sm" onclick="fillPresetProspect('logistics')">Demo: Freight/Logistics</button>
+            <button class="btn btn-secondary btn-sm" onclick="fillPresetProspect('dental')">Demo: MedSpa/Healthcare</button>
+          </div>
+        </div>
+
+        <div class="panel">
+          <form onsubmit="handleFullAuditSubmit(event)">
+            <div class="form-grid">
+              <div class="form-group">
+                <label>Prospect Website Domain *</label>
+                <input type="text" id="scanDomain" required placeholder="e.g. apex-cyber.io" value="apex-cyber.io" />
+              </div>
+              <div class="form-group">
+                <label>Company Name</label>
+                <input type="text" id="scanCompany" placeholder="e.g. Apex Cyber Defense" value="Apex Cyber Defense" />
+              </div>
+              <div class="form-group">
+                <label>Decision Maker Name</label>
+                <input type="text" id="scanContactName" placeholder="e.g. Jordan Hayes" value="Jordan Hayes" />
+              </div>
+              <div class="form-group">
+                <label>Role / Title</label>
+                <input type="text" id="scanContactRole" placeholder="e.g. VP of Marketing" value="VP of Marketing" />
+              </div>
+              <div class="form-group">
+                <label>Prospect Email</label>
+                <input type="email" id="scanContactEmail" placeholder="jordan@apex-cyber.io" value="jordan@apex-cyber.io" />
+              </div>
+              <div class="form-group">
+                <label>Industry / Vertical</label>
+                <input type="text" id="scanIndustry" placeholder="e.g. B2B Cybersecurity" value="B2B Cybersecurity" />
+              </div>
+              <div class="form-group">
+                <label>Estimated Deal Value ($)</label>
+                <input type="number" id="scanDealValue" value="4000" />
+              </div>
+              <div class="form-group" style="justify-content:flex-end;">
+                <button type="submit" class="btn btn-accent" id="runAuditBtn" style="height:42px;">
+                  🔍 Run Deep Website Audit
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <!-- Audit Inspection Output Area -->
+        <div id="auditResultContainer" class="panel"></div>
+      </div>
+
+      <!-- TAB 3: COLD OUTREACH SEQUENCE STUDIO -->
+      <div id="tab-outreach" class="app-tab hidden">
+        <div class="panel-header">
+          <div>
+            <h2 style="font-size:1.6rem; font-weight:800;">Hyper-Personalized Outreach Sequence Studio</h2>
+            <p style="color:var(--text-muted); font-size:0.9rem;">3-touch cold email campaign + LinkedIn note dynamically built from each prospect's live website audit.</p>
+          </div>
+          <div style="display:flex; align-items:center; gap:10px;">
+            <label style="font-size:0.85rem; color:var(--text-muted);">Select Audited Prospect:</label>
+            <select id="outreachLeadSelector" onchange="renderOutreachStudio()" style="background:var(--bg-card); color:#fff; border:1px solid var(--border-highlight); padding:8px 14px; border-radius:8px;"></select>
+          </div>
+        </div>
+
+        <div id="outreachSequenceContainer"></div>
+      </div>
+
+      <!-- TAB 4: LEAD CRM & BULK DOMAIN SCANNER -->
+      <div id="tab-crm" class="app-tab hidden">
+        <div class="panel-header">
+          <div>
+            <h2 style="font-size:1.6rem; font-weight:800;">Outbound Lead CRM & Bulk Domain Scanner</h2>
+            <p style="color:var(--text-muted); font-size:0.9rem;">Manage your deal pipeline, update prospect stages, or batch-audit multiple domains at once.</p>
+          </div>
+          <div style="display:flex; gap:10px; flex-wrap:wrap;">
+            <select id="crmStageFilter" onchange="renderCrmTable()" style="background:var(--bg-card); color:#fff; border:1px solid var(--border); padding:8px 12px; border-radius:8px;">
+              <option value="ALL">All Stages</option>
+              <option value="Scanned">Scanned</option>
+              <option value="Outreach Sent">Outreach Sent</option>
+              <option value="Replied">Replied</option>
+              <option value="Booked Call">Booked Call</option>
+              <option value="Closed Won">Closed Won</option>
+            </select>
+            <button class="btn btn-secondary btn-sm" onclick="exportCrmCsv()">⬇ Export CSV</button>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Company</th>
+                  <th>Contact</th>
+                  <th>Health Score</th>
+                  <th>Deal Value ($)</th>
+                  <th>Pipeline Stage</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="crmTableBody"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Bulk Domain Batch Scanner -->
+        <div class="panel">
+          <h3 style="margin-bottom:8px;">⚡ Bulk Prospect Domain Scanner</h3>
+          <p style="color:var(--text-muted); font-size:0.88rem; margin-bottom:14px;">
+            Paste one domain per line (or comma-separated: <code>domain.com, Contact Name, DealValue</code>). SignalForge will audit every domain and build personalized sequences automatically.
+          </p>
+          <textarea id="bulkDomainsInput" rows="4" style="width:100%; background:var(--bg-dark); color:#fff; border:1px solid var(--border); border-radius:8px; padding:12px; margin-bottom:12px;" placeholder="beacon-logistics.com, Marcus Reed, 3500&#10;stratos-cloud.io, Nina Patel, 4500&#10;kinetix-robotics.com, Owen Shaw, 5000">beacon-logistics.com, Marcus Reed, 3500
+stratos-cloud.io, Nina Patel, 4500
+kinetix-robotics.com, Owen Shaw, 5000</textarea>
+          <button class="btn btn-accent" onclick="runBulkDomainScan()">Run Batch Audit on All Domains &rarr;</button>
+        </div>
+      </div>
+
+      <!-- TAB 5: BILLING, WHITE-LABEL & API SETTINGS -->
+      <div id="tab-settings" class="app-tab hidden">
+        <div class="panel-header">
+          <div>
+            <h2 style="font-size:1.6rem; font-weight:800;">White-Label Branding, API Keys & Subscription Billing</h2>
+            <p style="color:var(--text-muted); font-size:0.9rem;">Configure your agency offer, calendar link, optional AI/Stripe keys, and subscription tier.</p>
+          </div>
+        </div>
+
+        <div class="panel">
+          <h3 style="margin-bottom:16px;">1. Your Outbound Sender Profile & Offer (Injected into All Cold Sequences & Audit PDFs)</h3>
+          <form onsubmit="saveUserSettings(event)">
+            <div class="form-grid">
+              <div class="form-group">
+                <label>Your Full Name</label>
+                <input type="text" id="setSenderName" required />
+              </div>
+              <div class="form-group">
+                <label>Your Agency / SaaS Company Name</label>
+                <input type="text" id="setCompanyName" required />
+              </div>
+              <div class="form-group">
+                <label>Your Booking Calendar Link (Calendly / Cal.com)</label>
+                <input type="text" id="setCalendarUrl" required />
+              </div>
+              <div class="form-group">
+                <label>Account Email</label>
+                <input type="email" id="setSenderEmail" required />
+              </div>
+            </div>
+            <div class="form-group" style="margin-top:14px;">
+              <label>Core Value Proposition / Pitch Sentence</label>
+              <input type="text" id="setOfferPitch" required />
+            </div>
+
+            <h3 style="margin:24px 0 12px;">2. Optional Production API Keys (Stripe Live Billing & LLM Enrichment)</h3>
+            <div class="form-grid">
+              <div class="form-group">
+                <label>Stripe Secret Key (<code>sk_live_...</code> or <code>sk_test_...</code>)</label>
+                <input type="password" id="setStripeSecret" placeholder="Leave blank for instant Sandbox Checkout mode" />
+              </div>
+              <div class="form-group">
+                <label>OpenAI / Gemini API Key (Optional)</label>
+                <input type="password" id="setAiKey" placeholder="Uses built-in deterministic engine if blank" />
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="margin-top:18px;">Save Workspace Settings</button>
+          </form>
+        </div>
+
+        <div class="panel">
+          <h3 style="margin-bottom:12px;">3. Subscription Tier & Stripe Checkout</h3>
+          <p style="color:var(--text-muted); font-size:0.9rem; margin-bottom:18px;">
+            Test your customer upgrade experience or connect your `STRIPE_SECRET_KEY` above to process live credit card subscriptions.
+          </p>
+          <div style="display:flex; gap:12px; flex-wrap:wrap;">
+            <button class="btn btn-secondary" onclick="triggerCheckout('starter')">Switch to Starter ($49/mo — 100 Credits)</button>
+            <button class="btn btn-primary" onclick="triggerCheckout('growth')">Switch to Growth Pro ($149/mo — 500 Credits)</button>
+            <button class="btn btn-accent" onclick="triggerCheckout('agency')">Switch to Agency Scale ($399/mo — 2,500 Credits)</button>
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </div>
+
+  <!-- MODAL: CLIENT SHAREABLE AUDIT REPORT / BUSINESS KIT / LEGAL -->
+  <div id="universalModal" class="modal-backdrop hidden" onclick="if(event.target===this) closeModal()">
+    <div class="modal-content" id="universalModalBody"></div>
+  </div>
+
+  <div id="toastBox" class="toast hidden"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
